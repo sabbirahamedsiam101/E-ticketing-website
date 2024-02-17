@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- add tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- cdn js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
     <title>E-ticketing waebsite</title>
 </head>
-<body>
-     <!-- headeer -->
-     <header class=" flex items-center justify-between lg:px-[7%] px-[4%] lg:py-4 py3">
+<body class="">
+     <!-- headeer for web -->
+     <header class="hidden lg:flex items-center justify-between lg:px-[7%] px-[4%] lg:py-4 py3">
         <!-- logo -->
          <div>
             <h2 class="font-bold text-4xl">  E-Ticket  </h2>
@@ -31,22 +34,44 @@
             </div>
         </div> 
      </header>
+     <!-- headeer for mobile -->
+     <header class="flex lg:hidden  items-center justify-between lg:px-[7%] px-[4%] lg:py-4 py3 relative">
+        <!-- logo -->
+         <div>
+            <h2 class="font-bold lg:text-4xl text-2xl">  E-Ticket  </h2>
+         </div>
+         <!-- page list & button-->
+         <div><a href="#" class="text-xl"><i class="fa-solid fa-square-caret-down"></i></a></div>
+            <ul class="flex  lg:flex-row flex-col absolute bg-slate-500 w-full text-center top-[50px] z-50 py-5 hidden" >
+                <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">Home</a></li>
+                <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">About</a></li>
+                <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">Destination</a></li>
+                <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">Search</a></li>
+                <li class="hover:bg-slate-400 py-4"><a href="#">
+                    <div class="flex gap-2 items-center justify-center px-7 py-4  bg-[#1DD1001A] border border-[#1cd100e7]">
+                        <p  class="text-[18px]">Bus</p>
+                        <span> <img src="images/bus-icon.png"  class="max-w-full"></span>
+                    </div>
+                </a></li>
+             </ul>
+        
+     </header>
       <!-- main section -->
       <main class="">
         <!-- home banner -->
          <section class="mt-5 relative lg:px-[7%] px-[4%]">
              <div class="relative ">
-                <img src="images/banner.png" alt="" class="object-cover">
+                <img src="images/banner.png" alt="" class="object-cover lg:h-auto h-[400px] rounded-2xl">
                 <!-- content -->
                     <div  class="absolute flex-col  flex items-center top-0 h-full w-full justify-center p-5">
-                        <h1 class="lg:text-7xl text-2xl font-bold text-white text-center">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span> 
+                        <h1 class="lg:text-7xl text-3xl font-bold text-white text-center">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span> 
                         </h1>
                          <p class="text-center py-5 text-white max-w-[500px]"> Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                         <button class="flex gap-2 items-center justify-center px-7 py-4 rounded-xl bg-[#1DD100] border text-[22px] border-[#1DD10066] mx-auto ">Buy Tickets</button>
+                         <button class="flex gap-2 items-center justify-center lg:px-7 px-4 lg:py-4 py-2 rounded-xl bg-[#1DD100] border text-[22px] border-[#1DD10066] mx-auto ">Buy Tickets</button>
                     </div>
              </div>
              <!-- extra section for home -->
-             <div class=" h-[150px] flex items-center justify-center gap-10 -mt-14 relative z-20">
+             <div class=" lg:h-[150px] h-auto flex lg:flex-row flex-col items-center justify-center gap-10 lg:-mt-14 mt-10 lg:relative z-20">
                 <!-- card 1 -->
                 <div class="px-4 py-5 rounded-2xl bg-white flex gap-5 border-b-2 border-b-[#1DD100] w-[270px]">
                    <img src="images/people.png" class="w-[70px] h-[70px] border-dashed border-2 border-t-slate-400">
@@ -78,7 +103,7 @@
         <!-- best offer -->
          <section class="mt-8 lg:px-[7%] px-[4%]">
             <h1 class="text-6xl font-bold text-center">Best offers for you</h1>
-            <div class="flex gap-10 mt-10 items-center justify-center">
+            <div class="flex lg:flex-row flex-col gap-10 mt-10 items-center justify-center">
                 <!-- 1 -->
                 <div class="p-6 bg-[#FFBF0F] rounded-2xl flex justify-between items-center max-w-[430px] h-[200px]">
                       <!-- left div -->
@@ -122,15 +147,15 @@
         <section class="mt-12 border-t-2 border-[#1DD100] lg:px-[7%] px-[4%] py-10 rounded-t-[70px] bg-[#F7F8F8]">
                 <!-- content -->
                 <div>
-                    <h1 class="text-5xl font-bold text-center">Our Paribahan</h1>
+                    <h1 class="lg:text-5xl text-4xl font-bold text-center">Our Paribahan</h1>
                     <p class="mt-4 max-w-[500px] text-center mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
                 </div>
                 <!-- card -->
-                <div class="mt-8 flex items-center  bg-[#FFFFFF] rounded-3xl ">
+                <div class="mt-8 flex lg:flex-row flex-col items-center  bg-[#FFFFFF] rounded-3xl ">
                     <!-- left -->
-                    <div class="p-8">
+                    <div class="lg:p-8 p-4">
                          <!-- left top -->
-                        <div class="flex justify-between">
+                        <div class="flex lg:flex-row flex-col gap-5 justify-between">
                                 <div class="flex gap-5">
                                     <img src="images/bus-logo.png" alt="" class="max-w-[66px] max-h-[66px]">
                                     <div>
@@ -153,7 +178,7 @@
                                 <h2 class="text-[18px] font-semibold">Departure Time</h2>
                                 <h2 class="text-[18px] font-semibold">9:00 PM</h2>
                             </div>
-                            <div class="flex gap-8 items-center justify-center pt-4 ">
+                            <div class="flex lg:flex-nowrap flex-wrap gap-8 items-center justify-center pt-4 ">
                                 <h2 class="text-[15px] font-semibold bg-[#0307120D] rounded-xl px-7 py-2.5">Boarding Point - Laxmipur</h2>
                                 <h2 class="text-[15px] font-semibold bg-[#0307120D] rounded-xl px-7 py-2.5">Dropping Point - Bogura</h2>
                                 <h2 class="text-[15px] font-semibold bg-[#0307120D] rounded-xl px-7 py-2.5">Est. Time - 11 Hour</h2>
@@ -163,7 +188,7 @@
                     <!-- right -->
                     <div class="">
                         <div class="flex pr-7 justify-center">
-                            <img src="images/info-devider.png" alt="" class="h-full">
+                            <img src="images/info-devider.png" alt="" class="h-full lg:visible hidden">
                             <div class="p-8 items-center justify-center flex flex-col">
                                 <img src="images/fare.png" alt="" class="w-10">
                                 <h2 class="text-3xl font-bold">550 Taka</h2>
@@ -173,9 +198,9 @@
                     </div>
                 </div>
                 <!-- all seats -->
-                <div class="py-6  mt-9 rounded-2xl bg-[#FFFFFF] flex">
+                <div class="py-6  mt-9 rounded-2xl bg-[#FFFFFF] flex lg:flex-row flex-col justify-between">
                     <!-- left div -->
-                    <div class="w-[60%] px-9 border-r-2 border-dashed border-t-slate-400">
+                    <div class="lg:w-[60%] w-full px-9 border-r-2 border-dashed border-t-slate-400">
                         <h1 class="text-2xl font-bold py-4 ">Select Your Seat</h1>
                         <div class="flex items-center justify-between py-4 border-y bottom-2 border-dashed border-e-slate-300">
                             <div class="flex items-center">
@@ -195,7 +220,7 @@
                         <!-- seats -->
                         <div>
                             <!-- A section -->
-                            <div class="flex items-center justify-between">
+                            <!-- <div class="flex items-center justify-between">
                                  <div>
                                     <button class="p-4 font-normal">A</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">A1</button>
@@ -205,9 +230,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">A3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">A4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- B section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">B</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">B1</button>
@@ -217,9 +242,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">B3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">B4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- C section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">C</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">C1</button>
@@ -229,9 +254,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">C3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">C4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- D section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">D</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">D1</button>
@@ -241,9 +266,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">D3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">D4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- E section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">E</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">E1</button>
@@ -253,9 +278,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">E3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">E4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- F section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">F</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">F1</button>
@@ -265,9 +290,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">F3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">F4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- G section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">G</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">G1</button>
@@ -277,9 +302,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">G3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">G4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- H section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">H</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">H1</button>
@@ -289,9 +314,9 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">H3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">H4</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- I section -->
-                            <div class="flex items-center justify-between pt-3">
+                            <!-- <div class="flex items-center justify-between pt-3">
                                  <div>
                                     <button class="p-4 font-normal">I</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">I1</button>
@@ -301,12 +326,145 @@
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">I3</button>
                                     <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">I4</button>
                                 </div>
-                            </div>
+                            </div> -->
+
+                           <!-- all seats -->
+                           <div>
+                              <!-- A srction -->
+                              <div class="flex  gap-5 font-semibold">
+                                 <button class=" w-6 h-7">A</button>
+                                 <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A2</button>
+                                     </div>
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A4</button>
+                                     </div>
+                                 </div>
+                              </div>
+                              <!-- B srction -->
+                              <div class="flex  gap-5 font-semibold mt-4">
+                                 <button class=" w-6 h-7">B</button>
+                                 <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B2</button>
+                                     </div>
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B4</button>
+                                     </div>
+                                 </div>
+                              </div>
+                              <!-- C srction -->
+                              <div class="flex  gap-5 font-semibold mt-4">
+                                 <button class=" w-6 h-7">C</button>
+                                 <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C2</button>
+                                     </div>
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C4</button>
+                                     </div>
+                                 </div>
+                              </div>
+                              <!-- D srction -->
+                              <div class="flex  gap-5 font-semibold mt-4">
+                                 <button class=" w-6 h-7">D</button>
+                                 <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D2</button>
+                                     </div>
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D4</button>
+                                     </div>
+                                 </div>
+                              </div>
+                              <!-- E srction -->
+                              <div class="flex  gap-5 font-semibold mt-4">
+                                 <button class=" w-6 h-7">E</button>
+                                 <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E2</button>
+                                     </div>
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E4</button>
+                                     </div>
+                                 </div>
+                              </div>
+                              <!-- F srction -->
+                              <div class="flex  gap-5 font-semibold mt-4">
+                                 <button class=" w-6 h-7">F</button>
+                                 <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F2</button>
+                                     </div>
+                                     <div class="flex gap-6">
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F4</button>
+                                     </div>
+                                 </div>
+                              </div>
+                           </div>
+                            
                         </div>
                     </div>
                     <!-- right div -->
-                    <div class="w-[40%] px-9">
-                        <h1>Select Your Seat</h1>
+                    <div class="lg:w-[40%] w-full lg:px-9 px-4">
+                        <h1 class="text-2xl font-bold py-4 border-b border-2 border-dashed border-e-slate-300">Select Your Seat</h1>
+                        <!-- price section -->
+                        <div class="p-7 bg-[#F7F8F8] mt-7 rounded-2xl">
+                            <div class="flex items-center pb-4 justify-between border-b bottom-2 border-dashed border-e-slate-300">
+                                <p>Seat <span>1</span></p>
+                                <p> Class </p>
+                                <p> Price </p>
+                            </div>
+                            <!-- total price -->
+                            <div class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">
+                                <p class="font-semibold"> Total Price</p>
+                                <p class="font-semibold"> BDT : <span>1100</span> </p>
+                            </div>
+                            <!-- cupon code div -->
+                            <div class="flex lg:flex-row flex-col gap-6 bg-white pl-5 pr-2 py-2 rounded-lg justify-between">
+                                <input type="text" placeholder="Have any copupon?" class="bgtr focus:outline-0" >
+                                <button class="bg-[#1DD100] px-4 py-1 text-white rounded-lg">Apply</button>
+                            </div>
+                            <!-- Grand Total price -->
+                            <div class="bottom-2 pt-4  flex items-start justify-between">
+                                <p class="font-semibold"> Grand Total</p>
+                                <p class="font-semibold"> BDT : <span>1100</span> </p>
+                            </div>
+                        </div>
+                        <!-- passenger info -->
+                         <div>
+                            <div class="mt-5">
+                                <h1 class="font-bold text-lg">Passenger Name*</h1>
+                                <input type="text" placeholder="Enter your name" class="bgtr focus:outline-0 bg-white px-5 py-3 mt-3 rounded-xl  border-2 w-full border-e-slate-300" >
+                            </div>
+                            <div class="mt-5">
+                                <h1 class="font-bold text-lg">Phone Number*</h1>
+                                <input type="text" placeholder="Enter your phone number" class="bgtr focus:outline-0 bg-white px-5 py-3 mt-3 rounded-xl  border-2 w-full border-e-slate-300" >
+                            </div>
+                            <div class="mt-5">
+                                <h1 class="font-bold text-lg">Email ID</h1>
+                                <input type="text" placeholder="Enter your email id" class="bgtr focus:outline-0 bg-white px-5 py-3 mt-3 rounded-xl  border-2 w-full border-e-slate-300" >
+                            </div>
+                            <button class="w-full bg-[#1DD100] py-3 px-5 rounded-xl mt-5 text-xl text-white">Next</button>
+                         </div>
+                         <!-- conditions -->
+                         <div class="flex justify-between items-center py-4">
+                            <p class="font-light underline text-slate-400">Terms and Conditions</p>
+                            <p class="font-light underline text-slate-400">Cancellation Policy</p>
+                         </div>
                     </div>
                 </div>
 
