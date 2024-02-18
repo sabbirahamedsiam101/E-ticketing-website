@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en"  class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- cdn js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
     <title>E-ticketing waebsite</title>
+    <style>
+        .select {
+            color: white;
+            background:#1DD100 ;
+        }
+    </style>
 </head>
 <body class="">
      <!-- headeer for web -->
@@ -34,15 +39,22 @@
             </div>
         </div> 
      </header>
+
+
      <!-- headeer for mobile -->
-     <header class="flex lg:hidden  items-center justify-between lg:px-[7%] px-[4%] lg:py-4 py3 relative">
+     <header class="flex lg:hidden  items-center justify-between lg:px-[7%] px-[4%] pt-2 lg:py-4 py3 relative">
         <!-- logo -->
          <div>
             <h2 class="font-bold lg:text-4xl text-2xl">  E-Ticket  </h2>
          </div>
+
+         <!-- menu icon -->
+         <div onclick="showMenu()">
+            <a href="#" class="text-xl" id="open-menu" ><i class="fa-solid fa-square-caret-down"></i></a>
+            <a href="#" class="hidden"  id="close-menu"><i class="fa-solid fa-rectangle-xmark"></i></a>
+        </div>
          <!-- page list & button-->
-         <div><a href="#" class="text-xl"><i class="fa-solid fa-square-caret-down"></i></a></div>
-            <ul class="flex  lg:flex-row flex-col absolute bg-slate-500 w-full text-center top-[50px] z-50 py-5 hidden" >
+            <ul class="flex  lg:flex-row flex-col absolute bg-slate-500 w-full text-center top-[50px] z-50 py-5 hidden" id="menu">
                 <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">Home</a></li>
                 <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">About</a></li>
                 <li class="hover:bg-slate-400 py-4"><a href="#" class="text-[18px] ">Destination</a></li>
@@ -67,7 +79,10 @@
                         <h1 class="lg:text-7xl text-3xl font-bold text-white text-center">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span> 
                         </h1>
                          <p class="text-center py-5 text-white max-w-[500px]"> Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                         <button class="flex gap-2 items-center justify-center lg:px-7 px-4 lg:py-4 py-2 rounded-xl bg-[#1DD100] border text-[22px] border-[#1DD10066] mx-auto ">Buy Tickets</button>
+                         <a href="#poribohon">
+                            <button class="flex gap-2 items-center justify-center lg:px-7 px-4 lg:py-4 py-2 rounded-xl bg-[#1DD100] border text-[22px] border-[#1DD10066] mx-auto " >Buy Tickets </button>
+                         </a>
+                         
                     </div>
              </div>
              <!-- extra section for home -->
@@ -144,7 +159,7 @@
         <!-- best offer -->
 
         <!-- poribohon section -->
-        <section class="mt-12 border-t-2 border-[#1DD100] lg:px-[7%] px-[4%] py-10 rounded-t-[70px] bg-[#F7F8F8]">
+        <section class="mt-12 border-t-2 border-[#1DD100] lg:px-[7%] px-[4%] py-10 rounded-t-[70px] bg-[#F7F8F8]" id="poribohon">
                 <!-- content -->
                 <div>
                     <h1 class="lg:text-5xl text-4xl font-bold text-center">Our Paribahan</h1>
@@ -219,128 +234,19 @@
                         </div>
                         <!-- seats -->
                         <div>
-                            <!-- A section -->
-                            <!-- <div class="flex items-center justify-between">
-                                 <div>
-                                    <button class="p-4 font-normal">A</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">A1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">A2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">A3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">A4</button>
-                                </div>
-                            </div> -->
-                            <!-- B section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">B</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">B1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">B2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">B3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">B4</button>
-                                </div>
-                            </div> -->
-                            <!-- C section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">C</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">C1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">C2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">C3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">C4</button>
-                                </div>
-                            </div> -->
-                            <!-- D section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">D</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">D1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">D2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">D3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">D4</button>
-                                </div>
-                            </div> -->
-                            <!-- E section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">E</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">E1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">E2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">E3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">E4</button>
-                                </div>
-                            </div> -->
-                            <!-- F section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">F</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">F1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">F2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">F3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">F4</button>
-                                </div>
-                            </div> -->
-                            <!-- G section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">G</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">G1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">G2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">G3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">G4</button>
-                                </div>
-                            </div> -->
-                            <!-- H section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">H</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">H1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">H2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">H3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">H4</button>
-                                </div>
-                            </div> -->
-                            <!-- I section -->
-                            <!-- <div class="flex items-center justify-between pt-3">
-                                 <div>
-                                    <button class="p-4 font-normal">I</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-4">I1</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">I2</button>
-                                 </div>
-                                <div>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ">I3</button>
-                                    <button class="bg-[#F7F8F8] py-3 px-9 rounded-lg ml-8">I4</button>
-                                </div>
-                            </div> -->
-
                            <!-- all seats -->
-                           <div>
+                           <div id="allSeat" >
                               <!-- A srction -->
                               <div class="flex  gap-5 font-semibold">
                                  <button class=" w-6 h-7">A</button>
                                  <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A1</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="A1">A1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="A2">A2</button>
                                      </div>
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A2</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">A4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="A3">A3</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="A4">A4</button>
                                      </div>
                                  </div>
                               </div>
@@ -349,12 +255,12 @@
                                  <button class=" w-6 h-7">B</button>
                                  <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B1</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="B1">B1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="B2">B2</button>
                                      </div>
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B2</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">B4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="B3">B4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="B4">B4</button>
                                      </div>
                                  </div>
                               </div>
@@ -363,12 +269,12 @@
                                  <button class=" w-6 h-7">C</button>
                                  <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C1</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="C1">C1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="C2">C2</button>
                                      </div>
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C2</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">C4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="C3">C3</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="C4">C4</button>
                                      </div>
                                  </div>
                               </div>
@@ -377,12 +283,12 @@
                                  <button class=" w-6 h-7">D</button>
                                  <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D1</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="D1">D1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="D2">D2</button>
                                      </div>
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D2</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">D4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="D3">D3</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="D4">D4</button>
                                      </div>
                                  </div>
                               </div>
@@ -391,12 +297,12 @@
                                  <button class=" w-6 h-7">E</button>
                                  <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E1</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="E1">E1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="E2">E2</button>
                                      </div>
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E2</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">E4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="E3">E3</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="E4">E4</button>
                                      </div>
                                  </div>
                               </div>
@@ -405,12 +311,12 @@
                                  <button class=" w-6 h-7">F</button>
                                  <div class="flex lg:flex-row flex-col items-center justify-between gap-5 w-[90%]">
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F1</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F2</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="F2">F1</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="F2">F2</button>
                                      </div>
                                      <div class="flex gap-6">
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F2</button>
-                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200">F4</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="F3">F3</button>
+                                        <button class="block w-[100px] h-12 rounded-lg bg-slate-200 btn" id="F4">F4</button>
                                      </div>
                                  </div>
                               </div>
@@ -473,5 +379,9 @@
      </main>
      <!-- main section -->
     
+     <!-- connect uitility.js -->
+     <script src="./script/uitility.js"></script>
+     <!-- connect app.js -->
+     <script src="./script/app.js"></script>
 </body>
 </html>
