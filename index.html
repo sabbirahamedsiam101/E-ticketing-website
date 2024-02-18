@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>E-ticketing waebsite</title>
     <style>
-        .select {
-            color: white;
-            background:#1DD100 ;
-        }
+
     </style>
 </head>
 <body class="">
@@ -180,7 +177,7 @@
                                 </div>
                                 <div class="flex gap-2 items-center justify-center px-7 py-3 rounded-xl bg-[#1DD1001A] border border-   [#1DD10066]">
                                     <span> <img src="images/seat-green.png"  class="max-w-full"></span>
-                                    <p  class="text-[18px]">40 Seats left</p>
+                                    <p  class="text-[18px]"><span id="totalSeats" class="p-2 font-bold">24</span> Seats left</p>
                                 </div>
                         </div>
                         <!-- left bottom -->
@@ -334,11 +331,16 @@
                                 <p> Class </p>
                                 <p> Price </p>
                             </div>
+                            <ul>
+                                <li class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">hello</li>
+                                <li class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">hi</li>
+                            </ul>
                             <!-- total price -->
                             <div class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">
                                 <p class="font-semibold"> Total Price</p>
                                 <p class="font-semibold"> BDT : <span>1100</span> </p>
                             </div>
+                            
                             <!-- cupon code div -->
                             <div class="flex lg:flex-row flex-col gap-6 bg-white pl-5 pr-2 py-2 rounded-lg justify-between">
                                 <input type="text" placeholder="Have any copupon?" class="bgtr focus:outline-0" >

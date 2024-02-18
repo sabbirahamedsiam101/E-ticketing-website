@@ -1,8 +1,7 @@
 let openMenu = document.getElementById('open-menu');
 let colseMenu = document.getElementById('close-menu');
 let menu = document.getElementById('menu');
-let allSeat = document.getElementById('allSeat');
-const buttonsWithId = allSeat.querySelectorAll('button[A2]');
+let allseats = document.querySelectorAll('.btn');
 
 
 // show the menu 
@@ -19,28 +18,23 @@ window.onscroll = ()=> {
     menu.classList.add('hidden')
 }
 
-
-// select sit 
-function selectSeat() {
-    let selectedSeats = [];
-    const allSeat = document.querySelectorAll(".btn");
-     allSeat.forEach((seat)=>{
-        seat.addEventListener('click' , (e)=>{
-            if(selectedSeats.includes(e.target.id)){
-                e.target.style.backgroundColor = '';
-                let index = selectedSeats.indexOf(e.target.id);
-                selectedSeats.splice(index, 1 );
-            }else if(selectedSeats.length < 4 ){
-                e.target.style.backgroundColor = '#1DD100';
-                selectedSeats.push (e.target.id);
-                console.log(selectedSeats)
-            }
-            else{
-                alert('you can not book more then 4 seat')
-            }
-        })
-     })
-     
+let arrayOfselectedseat = []; // total select seat
+function getSelectedseat(){ 
+    allseats.forEach((seat)=>{    
+       seat.addEventListener('click' , ()=>{
+          if(seat.classList.contains('bg-green-500')){
+             seat.classList.remove('bg-green-500');
+             arrayOfselectedseat = arrayOfselectedseat.filter(selectedSeat => selectedSeat !== seat.id);
+          }else{
+            seat.classList.add('bg-green-500');
+            console.log(seat.innerHTML)
+            arrayOfselectedseat.push(seat.id);
+          }
+          console.log(arrayOfselectedseat)
+          let availableseats = document.getElementById('totalSeats').innerText =  allseats.length - arrayOfselectedseat.length;
+       })
+    })
+    
 }
-selectSeat()
+getSelectedseat()
 
