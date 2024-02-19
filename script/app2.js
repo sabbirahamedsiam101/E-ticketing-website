@@ -144,7 +144,7 @@ function getSuccesfullsms(){
     let disabledBtn =  submitButton.disabled = true
     phoneNumber.addEventListener('input' , function(){
         let numLength =  phoneNumber.value.length
-        if(numLength > 2){
+        if(numLength > 2 && selectedSeat.length > 0){
             disabledBtn =  submitButton.disabled = false
             submitButton.classList.remove('bg-slate-500')
             submitButton.classList.add('bg-green-500')
