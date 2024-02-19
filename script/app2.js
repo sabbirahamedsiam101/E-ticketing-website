@@ -90,7 +90,6 @@ function applyCupon(){
     })
 }
 
-
 // get price details
 function getPricedetails(seat) {
     const ul = document.getElementById('seat-details')
@@ -107,7 +106,7 @@ function getPricedetails(seat) {
     newli.classList.add('flex' , 'py-1' , 'justify-between')
     ul.appendChild(newli)
 }
-
+// get discount details
 function getDiscout(discount) {
     let discoutBox = document.getElementById('discout-box');
     const p1 = document.getElementById('p1');
@@ -135,3 +134,20 @@ function purchaseSeatnum(){
     purchaseSeat.innerHTML = selectedSeat.length
 }
 
+function getSuccesfullsms(){
+    let phoneNumber = document.getElementById('ph-number')
+    let submitButton = document.getElementById('submit-button')
+    let mainDiv = document.getElementById('main-section')
+    let successfull = document.getElementById('successfull')
+    let continueButton = document.getElementById('continue-button')
+    submitButton.addEventListener('click' , function(){
+        mainDiv.classList.add('hidden')
+        successfull.classList.remove('hidden')
+    })
+    continueButton.addEventListener('click' , function (){
+        mainDiv.classList.remove('hidden')
+        successfull.classList.add('hidden')
+    })
+
+}
+getSuccesfullsms()

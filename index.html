@@ -18,7 +18,7 @@
 </head>
 <body class="">
      <!-- headeer for web -->
-     <header class="hidden lg:flex items-center justify-between lg:px-[7%] px-[4%] lg:py-4 py3">
+     <header class="hidden lg:flex items-center justify-between lg:px-[7%] px-[4%] lg:py-4 py3" >
         <!-- logo -->
          <div>
             <h2 class="font-bold text-4xl">  E-Ticket  </h2>
@@ -70,7 +70,7 @@
         
      </header>
       <!-- main section -->
-      <main class="">
+      <main class="" id="main-section">
         <!-- home banner -->
          <section class="mt-5 relative lg:px-[7%] px-[4%]">
              <div class="relative ">
@@ -368,13 +368,13 @@
                             </div>
                             <div class="mt-5">
                                 <h1 class="font-bold text-lg">Phone Number*</h1>
-                                <input type="text" placeholder="Enter your phone number" class="bgtr focus:outline-0 bg-white px-5 py-3 mt-3 rounded-xl  border-2 w-full border-e-slate-300" >
+                                <input type="number" placeholder="Enter your phone number" class="bgtr focus:outline-0 bg-white px-5 py-3 mt-3 rounded-xl  border-2 w-full border-e-slate-300" id="ph-number">
                             </div>
                             <div class="mt-5">
                                 <h1 class="font-bold text-lg">Email ID</h1>
                                 <input type="text" placeholder="Enter your email id" class="bgtr focus:outline-0 bg-white px-5 py-3 mt-3 rounded-xl  border-2 w-full border-e-slate-300" >
                             </div>
-                            <button class="w-full bg-[#1DD100] py-3 px-5 rounded-xl mt-5 text-xl text-white">Next</button>
+                            <button class="w-full bg-green-500 py-3 px-5 rounded-xl mt-5 text-xl text-white" id="submit-button" >Next</button>
                          </div>
                          <!-- conditions -->
                          <div class="flex justify-between items-center py-4">
@@ -388,7 +388,22 @@
         <!-- poribohon section -->
      </main>
      <!-- main section -->
-    
+      
+    <!-- successfull massage -->
+    <div class="flex items-center justify-center h-[80vh] mx-3 hidden" id="successfull">
+        <div class="lg:max-w-[700px] max-w-[400px] lg:px-12 rounded-2xl px-5 lg:py-14 py-5 mx-auto  bg-slate-300">
+            <img src="images/success.png"  class="mx-auto w-12 h-12">
+            <p class="text-center font-bold text-2xl mt-5 text-[#27AE60]">SUCCESS</p>
+            <p class="text-center  text-lg mt-5 ">Thank you for Booking Our Bus Seats. 
+              We are working hard to find the best service and deals for you. 
+              Shortly you will find a confirmation in your email.
+          </p>
+          <button class="px-14 py-2 rounded-3xl text-white bg-[#27AE60] block mt-5 font-semibold mx-auto" id="continue-button">Continue</button>  
+       </div>
+    </div>
+     
+    <!-- successfull massage -->
+
      <!-- connect uitility.js -->
      <script src="./script/uitility.js"></script>
      <!-- connect app.js -->
