@@ -140,6 +140,17 @@ function getSuccesfullsms(){
     let mainDiv = document.getElementById('main-section')
     let successfull = document.getElementById('successfull')
     let continueButton = document.getElementById('continue-button')
+    let disabledBtn =  submitButton.disabled = true
+    phoneNumber.addEventListener('input' , function(){
+        let numLength =  phoneNumber.value.length
+        if(numLength > 2){
+            disabledBtn =  submitButton.disabled = false
+            submitButton.classList.remove('bg-slate-500')
+            submitButton.classList.add('bg-green-500')
+            console.log('bgcolorof btn ' + btnColor)
+            console.log('fales')
+        }
+    })
     submitButton.addEventListener('click' , function(){
         mainDiv.classList.add('hidden')
         successfull.classList.remove('hidden')
