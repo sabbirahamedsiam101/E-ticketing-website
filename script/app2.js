@@ -70,12 +70,13 @@ function applyCupon(){
     console.log( applyButton)
     applyButton.addEventListener('click' , function (){
         if(totalPrice >= 2200 && inputCupon.value === 'NEW15'){
-            let discount =  totalPrice * 0.15; 
-            let currentPrice = totalPrice - discount
-            console.log(currentPrice + 'discout');
-            getDiscout(discount) 
-            let grandTotal = document.getElementById('grand-total');
-            grandTotal.innerHTML = currentPrice;  
+                let discount =  totalPrice * 0.15; 
+                let currentPrice = totalPrice - discount
+                console.log(currentPrice + 'discout');
+                getDiscout(discount) 
+                let grandTotal = document.getElementById('grand-total');
+                grandTotal.innerHTML = currentPrice;  
+            
         }else if(totalPrice >= 2200 && inputCupon.value === 'Couple20'){
             let discount =  totalPrice * 0.20; 
             let currentPrice = totalPrice - discount
