@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>E-ticketing waebsite</title>
     <style>
-
+         .list-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
     </style>
 </head>
 <body class="">
@@ -145,7 +149,7 @@
                     <div class="flex items-center">
                         <img src="images/cupon-devider.png" class="pr-6">
                         <div>
-                            <h1  class="text-2xl font-bold">NEW15</h1>
+                            <h1  class="text-2xl font-bold">Couple20</h1>
                             <p class="mt-2">Coupon Code</p>
                         </div>
                     </div>
@@ -327,29 +331,28 @@
                         <!-- price section -->
                         <div class="p-7 bg-[#F7F8F8] mt-7 rounded-2xl">
                             <div class="flex items-center pb-4 justify-between border-b bottom-2 border-dashed border-e-slate-300">
-                                <p>Seat <span>1</span></p>
+                                <p>Seat <span class="bg-green-500 rounded-2xl px-2" id="purchaseSeat">0</span></p>
                                 <p> Class </p>
                                 <p> Price </p>
                             </div>
-                            <ul>
-                                <li class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">hello</li>
-                                <li class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">hi</li>
+                            <ul class="py-4  border-b  border-dashed border-e-slate-300" id="seat-details">
+                                
                             </ul>
                             <!-- total price -->
                             <div class="border-t bottom-2 py-4  border-e-slate-300 flex items-start justify-between">
                                 <p class="font-semibold"> Total Price</p>
-                                <p class="font-semibold"> BDT : <span>1100</span> </p>
+                                <p class="font-semibold"> BDT : <span id="total-price">00</span> </p>
                             </div>
                             
                             <!-- cupon code div -->
                             <div class="flex lg:flex-row flex-col gap-6 bg-white pl-5 pr-2 py-2 rounded-lg justify-between">
-                                <input type="text" placeholder="Have any copupon?" class="bgtr focus:outline-0" >
-                                <button class="bg-[#1DD100] px-4 py-1 text-white rounded-lg">Apply</button>
+                                <input type="text" placeholder="Have any copupon?" class="focus:outline-0" id="input-cupon">
+                                <button class="bg-green-500 px-4 py-1 text-white rounded-lg" id="apply">Apply</button>
                             </div>
                             <!-- Grand Total price -->
                             <div class="bottom-2 pt-4  flex items-start justify-between">
                                 <p class="font-semibold"> Grand Total</p>
-                                <p class="font-semibold"> BDT : <span>1100</span> </p>
+                                <p class="font-semibold"> BDT : <span id="grand-total">0</span> </p>
                             </div>
                         </div>
                         <!-- passenger info -->
@@ -384,6 +387,6 @@
      <!-- connect uitility.js -->
      <script src="./script/uitility.js"></script>
      <!-- connect app.js -->
-     <script src="./script/app.js"></script>
+     <script src="./script/app2.js"></script>
 </body>
 </html>
